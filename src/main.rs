@@ -1,14 +1,15 @@
 use std::io;
+use colored::*;
 use rand::Rng;
 
 
 fn main() {
     let text = "Welcome to the Rust Password Generator!";
 
-    println!("{}", text);
+    println!("{}", text.red());
 
 
-    println!("Enter the length of the password:");
+    println!("{}","Enter the length of the password:".blue());
     let mut length = String::new();
 
     io::stdin()
@@ -20,7 +21,7 @@ fn main() {
 
     let password = generate_password(length);
 
-    println!("Your Password: {}", password);
+    println!("Your Password: {}", password.green());
    
 }
 
